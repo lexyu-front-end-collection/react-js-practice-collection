@@ -12,8 +12,7 @@ function Hello({ name, msg, emoji }) {
     <div>
       <h1>
         {/* Hello {props.name}, {props.msg}! {test} , {10 + 20}, {displayMsg()} */}
-        Hello {name}, {msg}
-        {emoji}! {test} , {10 + 20}, {displayMsg()}
+        Hello {name}, {msg} {emoji}! {test} , {10 + 20}, {displayMsg()}
       </h1>
       <h1>Test</h1>
     </div>
