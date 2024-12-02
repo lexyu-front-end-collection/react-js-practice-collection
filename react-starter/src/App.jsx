@@ -1,7 +1,9 @@
 import Hello from "./components/Hello";
 import Imutability from "./components/Imutability";
-import ArraysAndObject from "./components/ArraysAndObject";
-import Fruits from "./components/Fruits";
+import Props from "./components/Props";
+import ListAndKey from "./components/ListAndKey";
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   const seatNumbers = [1, 4, 7];
@@ -18,12 +20,14 @@ function App() {
       <Hello name="ABC" msg="Here" emoji="💥" />
       <Hello name="XYZ" msg="Nothing" emoji="🎇" />
       <Imutability name="HJK" msg="WoW" emoji="✨"></Imutability>
-      <ArraysAndObject
+      <Props
         seatNumbers={seatNumbers}
         human={human}
-      ></ArraysAndObject>
+      ></Props>
+      <ListAndKey></ListAndKey>
+      <Header></Header>
 
-      <Fruits></Fruits>
+      <Footer></Footer>
     </>
   );
 }
