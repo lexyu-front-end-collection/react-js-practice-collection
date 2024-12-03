@@ -3,7 +3,7 @@ function Footer() {
 
     return (
         <footer>
-            <p>&copy; None</p>
+            <p>&copy; {new Date().getFullYear()} None </p>
         </footer>
     )
 }
