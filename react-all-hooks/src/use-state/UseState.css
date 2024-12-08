@@ -1,0 +1,28 @@
+.counter-container {
+	text-align: center;
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.count-display {
+	font-size: 7em;
+	font-weight: bolder;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.counter-button {
+	font-size: 1.5em;
+	font-weight: 50px;
+	background-color: #4CAF50;
+	/* 柔和的綠色 */
+	color: white;
+	padding: 10px 20px;
+	margin: 0px 20px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
