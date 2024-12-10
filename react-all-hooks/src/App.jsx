@@ -5,6 +5,7 @@ import UpdateObjects from './use-state/updateObjects.jsx'
 import UseEffectDemo1 from './use-effect/useEffectDemo1.jsx'
 import UseEffectDemo2 from './use-effect/useEffectDemo2.jsx'
 import ContextDemoA from './use-context/ContextDemoA.jsx'
+import RefDemo from './use-ref/RefDemo.jsx'
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
       {/* <UpdateObjects></UpdateObjects> */}
       {/* <UseEffectDemo1></UseEffectDemo1> */}
       {/* <UseEffectDemo2></UseEffectDemo2> */}
-      <ContextDemoA></ContextDemoA>
+      {/* <ContextDemoA></ContextDemoA> */}
+      <RefDemo></RefDemo>
     </>
   )
 }
