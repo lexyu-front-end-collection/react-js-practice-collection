@@ -6,6 +6,9 @@ import UseEffectDemo1 from './use-effect/useEffectDemo1.jsx'
 import UseEffectDemo2 from './use-effect/useEffectDemo2.jsx'
 import ContextDemoA from './use-context/ContextDemoA.jsx'
 import RefDemo from './use-ref/RefDemo.jsx'
+import StateExample from './use-state/StateExample.jsx'
+import EffectExample from './use-effect/EffectExample.jsx'
+import ContextExample from './use-context/ContextExample.jsx'
 
 function App() {
 
@@ -18,7 +21,10 @@ function App() {
       {/* <UseEffectDemo1></UseEffectDemo1> */}
       {/* <UseEffectDemo2></UseEffectDemo2> */}
       {/* <ContextDemoA></ContextDemoA> */}
-      <RefDemo></RefDemo>
+      {/* <RefDemo></RefDemo> */}
+      {/* <StateExample></StateExample> */}
+      {/* <EffectExample></EffectExample> */}
+      <ContextExample></ContextExample>
     </>
   )
 }
