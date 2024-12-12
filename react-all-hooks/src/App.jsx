@@ -8,23 +8,40 @@ import ContextDemoA from './use-context/ContextDemoA.jsx'
 import RefDemo from './use-ref/RefDemo.jsx'
 import StateExample from './use-state/StateExample.jsx'
 import EffectExample from './use-effect/EffectExample.jsx'
+import BeforeContextExample from './use-context/BeforeContextExample.jsx'
 import ContextExample from './use-context/ContextExample.jsx'
+import BeforeReducerDemo from './use-reducer/BeforeReducerDemo.jsx'
+import ReducerDemo from './use-reducer/ReducerDemo.jsx'
+import RefExample from './use-ref/RefExample.jsx'
 
 function App() {
 
   return (
     <>
+      {/* UseState */}
       {/* <UseStateDemo></UseStateDemo> */}
       {/* <Counter></Counter> */}
       {/* <Counter2></Counter2> */}
       {/* <UpdateObjects></UpdateObjects> */}
+      {/* <StateExample></StateExample> */}
+
+      {/* UseEffect */}
       {/* <UseEffectDemo1></UseEffectDemo1> */}
       {/* <UseEffectDemo2></UseEffectDemo2> */}
-      {/* <ContextDemoA></ContextDemoA> */}
-      {/* <RefDemo></RefDemo> */}
-      {/* <StateExample></StateExample> */}
       {/* <EffectExample></EffectExample> */}
-      <ContextExample></ContextExample>
+
+      {/* UseContext */}
+      {/* <ContextDemoA></ContextDemoA> */}
+      {/* <BeforeContextExample></BeforeContextExample> */}
+      {/* <ContextExample></ContextExample> */}
+
+      {/* UseReducer */}
+      {/* <BeforeReducerDemo></BeforeReducerDemo> */}
+      {/* <ReducerDemo></ReducerDemo> */}
+
+      {/* UseRef */}
+      {/* <RefDemo></RefDemo> */}
+      <RefExample></RefExample>
     </>
   )
 }
