@@ -13,6 +13,14 @@ import ContextExample from './use-context/ContextExample.jsx'
 import BeforeReducerDemo from './use-reducer/BeforeReducerDemo.jsx'
 import ReducerDemo from './use-reducer/ReducerDemo.jsx'
 import RefExample from './use-ref/RefExample.jsx'
+import ImperativeHandle from './use-imperative-handle/ImperativeHandle.jsx'
+import LayoutEffect from './use-layout-effect/LayoutEffect.jsx'
+import DeferredValueExample from './use-deferred-value/DeferredValue.jsx'
+import SyncExternalStoreExample from './use-sync-external-store/SyncExternalStore.jsx'
+import InsertionEffect from './use-insertion-effect/InsertionEffect.jsx'
+import UseIdExample from './use-id/UseId.jsx'
+import TransitionExample from './use-transition/Transition.jsx'
+import BeforeSyncExternalStoreExample from './use-sync-external-store/BeforeSyncExternalStore.jsx'
 
 function App() {
 
@@ -41,7 +49,29 @@ function App() {
 
       {/* UseRef */}
       {/* <RefDemo></RefDemo> */}
-      <RefExample></RefExample>
+      {/* <RefExample></RefExample> */}
+
+      {/* ImperativeHandle */}
+      {/* <ImperativeHandle></ImperativeHandle> */}
+
+      {/* UseLayoutEffect */}
+      {/* <LayoutEffect></LayoutEffect> */}
+
+      {/* UseDeferredValue */}
+      {/* <DeferredValueExample></DeferredValueExample> */}
+
+      {/* UseSyncExternalStore */}
+      <SyncExternalStoreExample></SyncExternalStoreExample>
+      {/* <BeforeSyncExternalStoreExample></BeforeSyncExternalStoreExample> */}
+
+      {/* UseInsertionEffect */}
+      {/* <InsertionEffect></InsertionEffect> */}
+
+      {/* UseId */}
+      {/* <UseIdExample></UseIdExample> */}
+
+      {/* Transition */}
+      {/* <TransitionExample></TransitionExample> */}
     </>
   )
 }
