@@ -21,6 +21,8 @@ import InsertionEffect from './use-insertion-effect/InsertionEffect.jsx'
 import UseIdExample from './use-id/UseId.jsx'
 import TransitionExample from './use-transition/Transition.jsx'
 import BeforeSyncExternalStoreExample from './use-sync-external-store/BeforeSyncExternalStore.jsx'
+import BeforeMemo from './use-memo/BeforeMemo.jsx'
+import MemoDemo from './use-memo/MemoDemo.jsx'
 
 function App() {
 
@@ -61,7 +63,7 @@ function App() {
       {/* <DeferredValueExample></DeferredValueExample> */}
 
       {/* UseSyncExternalStore */}
-      <SyncExternalStoreExample></SyncExternalStoreExample>
+      {/* <SyncExternalStoreExample></SyncExternalStoreExample> */}
       {/* <BeforeSyncExternalStoreExample></BeforeSyncExternalStoreExample> */}
 
       {/* UseInsertionEffect */}
@@ -72,6 +74,10 @@ function App() {
 
       {/* Transition */}
       {/* <TransitionExample></TransitionExample> */}
+
+      {/* UseMemo */}
+      {/* <BeforeMemo></BeforeMemo> */}
+      <MemoDemo></MemoDemo>
     </>
   )
 }
