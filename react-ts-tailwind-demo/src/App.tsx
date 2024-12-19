@@ -1,4 +1,5 @@
 import { dummyData } from "./data/todos"
+import TodoItem from "./components/TodoItem"
 
 function App() {
 
@@ -7,10 +8,11 @@ function App() {
       <h1 className="text-3xl font-bold text-center">Setup Demo(Todos)</h1>
       <div className="mx-auto max-w-lg">
         <div className="space-y-2">
-          {dummyData.map((item) => (
-            <p key={item.id} className="text-lg">
-              <p>{item.title} - {String(item.completed)}</p>
-            </p>
+          {dummyData.map((todo) => (
+            <TodoItem todo={todo} />
+            // <p key={item.id} className="text-lg">
+            //   <p>{item.title} - {String(item.completed)}</p>
+            // </p>
           ))}
         </div>
       </div>

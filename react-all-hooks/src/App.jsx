@@ -23,6 +23,9 @@ import TransitionExample from './use-transition/Transition.jsx'
 import BeforeSyncExternalStoreExample from './use-sync-external-store/BeforeSyncExternalStore.jsx'
 import BeforeMemo from './use-memo/BeforeMemo.jsx'
 import MemoDemo from './use-memo/MemoDemo.jsx'
+import BeforeCallback from './use-callback/BeforeCallback.jsx'
+import CallbackDemo from './use-callback/CallbackDemo.jsx'
+import Search from './use-callback/Search.jsx'
 
 function App() {
 
@@ -77,7 +80,12 @@ function App() {
 
       {/* UseMemo */}
       {/* <BeforeMemo></BeforeMemo> */}
-      <MemoDemo></MemoDemo>
+      {/* <MemoDemo></MemoDemo> */}
+
+      {/* UseCallback */}
+      {/* <BeforeCallback></BeforeCallback> */}
+      <CallbackDemo></CallbackDemo>
+      
     </>
   )
 }
