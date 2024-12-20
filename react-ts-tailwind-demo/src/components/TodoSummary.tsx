@@ -8,8 +8,8 @@ interface TodoSummaryProps {
 export default function TodoSummary({ todos, deleteAllCompleted }: TodoSummaryProps) {
     const completed = todos.filter(todo => todo.completed);
     return (
-        <div className="text-center space-y-2">
-            <h2>Todo Summary</h2>
+        <div className="space-y-2 text-center">
+            <p>{completed.length} / {todos.length} todos completed</p>
         </div>
     )
 }
