@@ -9,6 +9,7 @@ function App() {
   const [todos, setTodos] = useState<Todo[]>(dummyData)
 
   function setTodoCompleted(id: number, completed: boolean) {
+    // alert(`id: ${id}, completed: ${completed}`)
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
         todo.id === id ? { ...todo, completed } : todo
@@ -25,6 +26,10 @@ function App() {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id))
   }
 
+  function deleteAllCompletedTodos() {
+    setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed))
+  }
+
   return (
     <main className="overflow-y-auto py-10 space-y-5 h-screen">
       <h1 className="text-3xl font-bold text-center">Setup Demo(Todos)</h1>
@@ -36,7 +41,7 @@ function App() {
           onDelete={deleteTodo}></TodoList>
         <TodoSummary
           todos={todos}
-          deleteAllCompleted={() => { }}></TodoSummary>
+          deleteAllCompleted={deleteAllCompletedTodos}></TodoSummary>
       </div>
     </main>
   )
