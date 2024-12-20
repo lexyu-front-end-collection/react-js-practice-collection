@@ -9,7 +9,6 @@ function App() {
   const [todos, setTodos] = useState<Todo[]>(dummyData)
 
   function setTodoCompleted(id: number, completed: boolean) {
-    // alert(`id: ${id}, completed: ${completed}`)
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
         todo.id === id ? { ...todo, completed } : todo
