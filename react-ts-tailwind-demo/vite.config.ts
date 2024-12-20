@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     react()
   ],
+  base: "/react-ts-tailwind-demo/",
   server: {
     hmr: {
       protocol: 'ws',
