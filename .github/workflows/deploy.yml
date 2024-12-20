@@ -1,9 +1,11 @@
-name: Deploy
+name: Deploy React TS Tailwind Demo
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "react-ts-tailwind-demo/**"
 
 jobs:
   build:
@@ -16,18 +18,22 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: "22"
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        working-directory: ./react-ts-tailwind-demo
+        run: npm install
 
       - name: Build project
+        working-directory: ./react-ts-tailwind-demo
         run: npm run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: ./react-ts-tailwind-demo/dist
 
   deploy:
     name: Deploy
