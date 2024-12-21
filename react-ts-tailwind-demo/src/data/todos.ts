@@ -1,14 +1,18 @@
-import { Todo } from '../types/todo'
+import { Todo } from '@/types/todo'
+
+const generateUniqueId = () => {
+    return Date.now() + Math.random(); // 結合當前時間和隨機數
+};
 
 export const dummyData: Todo[] = [
-    { id: 1, title: 'Buy groceries 🎂👍', completed: false },
-    { id: 2, title: 'Walk the dog 🐕💦', completed: true },
-    { id: 3, title: 'Finish project report 📄📊', completed: false },
-    { id: 4, title: 'Read a book 📚👓', completed: true },
-    { id: 5, title: 'Exercise 🏋️‍♂️💪', completed: false },
-    { id: 6, title: 'Call mom 📞👵', completed: true },
-    { id: 7, title: 'Plan vacation 🏖️🗺️', completed: false },
-    { id: 8, title: 'Clean the house 🧹💪', completed: true },
-    { id: 9, title: 'Attend meeting 🗓️📝', completed: false },
-    { id: 10, title: 'Buy a gift 🎁🎁', completed: true }
+    { id: generateUniqueId(), title: 'Buy groceries 🎂👍', completed: false },
+    { id: generateUniqueId(), title: 'Walk the dog 🐕💦', completed: true },
+    { id: generateUniqueId(), title: 'Finish project report 📄📊', completed: false },
+    { id: generateUniqueId(), title: 'Read a book 📚👓', completed: true },
+    { id: generateUniqueId(), title: 'Exercise 🏋️‍♂️💪', completed: false },
+    { id: generateUniqueId(), title: 'Call mom 📞👵', completed: true },
+    { id: generateUniqueId(), title: 'Plan vacation 🏖️🗺️', completed: false },
+    { id: generateUniqueId(), title: 'Clean the house 🧹💪', completed: true },
+    { id: generateUniqueId(), title: 'Attend meeting 🗓️📝', completed: false },
+    { id: generateUniqueId(), title: 'Buy a gift 🎁🎁', completed: true }
 ];

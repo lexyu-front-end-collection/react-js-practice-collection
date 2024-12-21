@@ -1,34 +1,16 @@
-import { dummyData } from "./data/todos"
-import { useState } from "react"
-import { Todo } from "./types/todo"
-import AddTodoForm from "./components/AddTodoForm"
-import TodoList from "./components/TodoList"
-import TodoSummary from "./components/TodoSummary"
+import AddTodoForm from "@/components/AddTodoForm"
+import TodoList from "@/components/TodoList"
+import TodoSummary from "@/components/TodoSummary"
+import useTodos from "@/hooks/useTodos"
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>(dummyData)
-
-  function setTodoCompleted(id: number, completed: boolean) {
-    // alert(`id: ${id}, completed: ${completed}`)
-    setTodos((prevTodos) =>
-      prevTodos.map((todo) =>
-        todo.id === id ? { ...todo, completed } : todo
-      )
-    )
-  }
-
-  function addTodo(title: string) {
-    // setTodos((prevTodos) => [...prevTodos, { id: Date.now(), title, completed: false }])
-    setTodos((prevTodos) => [{ id: prevTodos.length + 1, title, completed: false }, ...prevTodos])
-  }
-
-  function deleteTodo(id: number) {
-    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id))
-  }
-
-  function deleteAllCompletedTodos() {
-    setTodos((prevTodos) => prevTodos.filter((todo) => !todo.completed))
-  }
+  const {
+    todos,
+    setTodoCompleted,
+    addTodo,
+    deleteTodo,
+    deleteAllCompletedTodos
+  } = useTodos()
 
   return (
     <main className="overflow-y-auto py-10 space-y-5 h-screen">
