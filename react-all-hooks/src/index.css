@@ -29,15 +29,30 @@ a:hover {
 
 body {
     margin: 0;
-    display: flex;
-    place-items: center;
     min-width: 320px;
     min-height: 100vh;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.loading-placeholder {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
+    color: black;
 }
 
 button {

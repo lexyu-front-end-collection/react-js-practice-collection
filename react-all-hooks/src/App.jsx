@@ -26,6 +26,10 @@ import MemoDemo from './use-memo/MemoDemo.jsx'
 import BeforeCallback from './use-callback/BeforeCallback.jsx'
 import CallbackDemo from './use-callback/CallbackDemo.jsx'
 import Search from './use-callback/Search.jsx'
+import IntervalProblem from './custom_hooks/interval/IntervalProblem.jsx'
+import IntervalProblem2 from './custom_hooks/interval/IntervalProblem2.jsx'
+import UseIntervalDemo from './custom_hooks/interval/UseInterval.jsx'
+import DataFetchDemo1 from './data-fetching/demo1/DataFetching.jsx'
 
 function App() {
 
@@ -84,8 +88,15 @@ function App() {
 
       {/* UseCallback */}
       {/* <BeforeCallback></BeforeCallback> */}
-      <CallbackDemo></CallbackDemo>
-      
+      {/* <CallbackDemo></CallbackDemo> */}
+
+      {/* Custom Hooks */}
+      {/* <IntervalProblem></IntervalProblem> */}
+      {/* <IntervalProblem2></IntervalProblem2> */}
+      {/* <UseIntervalDemo></UseIntervalDemo> */}
+
+      {/* Data Fetching */}
+      <DataFetchDemo1></DataFetchDemo1>
     </>
   )
 }
