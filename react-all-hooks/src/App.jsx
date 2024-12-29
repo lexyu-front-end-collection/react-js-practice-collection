@@ -30,11 +30,20 @@ import IntervalProblem from './custom_hooks/interval/IntervalProblem.jsx'
 import IntervalProblem2 from './custom_hooks/interval/IntervalProblem2.jsx'
 import UseIntervalDemo from './custom_hooks/interval/UseInterval.jsx'
 import DataFetchDemo1 from './data-fetching/demo1/DataFetching.jsx'
+import DataFetchDemo2 from './data-fetching/demo2/DataFetching2.jsx'
+// import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import ContainerPresentational from './react-design-patterns/container-presentational/ContainerPresentational.jsx'
+import Stopwatch from './react-design-patterns/custom-hook/components/Stopwatch.jsx'
+import Countdown from './react-design-patterns/custom-hook/components/Countdown.jsx'
+
+// const queryClient = new QueryClient()
 
 function App() {
 
   return (
     <>
+      {/* <QueryClientProvider client={queryClient}> */}
+
       {/* UseState */}
       {/* <UseStateDemo></UseStateDemo> */}
       {/* <Counter></Counter> */}
@@ -96,7 +105,16 @@ function App() {
       {/* <UseIntervalDemo></UseIntervalDemo> */}
 
       {/* Data Fetching */}
-      <DataFetchDemo1></DataFetchDemo1>
+      {/* <DataFetchDemo1></DataFetchDemo1> */}
+      {/* <DataFetchDemo2></DataFetchDemo2> */}
+
+      {/* Design Patterns */}
+      {/* <ContainerPresentational></ContainerPresentational> */}
+      <Stopwatch></Stopwatch>
+      <Countdown initSeconds={60}></Countdown>
+
+      {/* </QueryClientProvider> */}
+
     </>
   )
 }
