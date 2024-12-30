@@ -35,14 +35,20 @@ import DataFetchDemo2 from './data-fetching/demo2/DataFetching2.jsx'
 import ContainerPresentational from './react-design-patterns/container-presentational/ContainerPresentational.jsx'
 import Stopwatch from './react-design-patterns/custom-hook/components/Stopwatch.jsx'
 import Countdown from './react-design-patterns/custom-hook/components/Countdown.jsx'
+import Profile from './react-design-patterns/high-order-component/components/Profile.jsx'
+import Dashboard from './react-design-patterns/high-order-component/components/Dashboard.jsx'
+import withAuth from './react-design-patterns/high-order-component/hoc/withAuth.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 
 // const queryClient = new QueryClient()
 
 function App() {
+  const AuthenticatedDashboard = withAuth(Dashboard);
+  const AuthenticatedProfile = withAuth(Profile);
 
   return (
     <>
-      {/* <QueryClientProvider client={queryClient}> */}
 
       {/* UseState */}
       {/* <UseStateDemo></UseStateDemo> */}
@@ -110,10 +116,27 @@ function App() {
 
       {/* Design Patterns */}
       {/* <ContainerPresentational></ContainerPresentational> */}
-      <Stopwatch></Stopwatch>
-      <Countdown initSeconds={60}></Countdown>
-
+      {/* React Query */}
+      {/* <QueryClientProvider client={queryClient}> */}
+      {/* <Stopwatch></Stopwatch> */}
+      {/* <Countdown initSeconds={60}></Countdown> */}
       {/* </QueryClientProvider> */}
+      {/* React Router */}
+
+      <Router>
+        <Routes>
+          <Route path='/' element={
+            <div>
+              <h1>HOC - High Order Component</h1>
+              <p className='text-red-500'>Login Page For Unauthenticated</p>
+            </div>
+          }></Route>
+          <Route path='/profile' element={<AuthenticatedProfile></AuthenticatedProfile>}></Route>
+          <Route path='/dashboard' element={<AuthenticatedDashboard></AuthenticatedDashboard>}></Route>
+
+        </Routes>
+      </Router>
+
 
     </>
   )
